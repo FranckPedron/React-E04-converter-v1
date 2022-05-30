@@ -1,0 +1,17 @@
+@use "src/styles/vars";
+
+.amount {
+  color: vars.$primaryColor;
+  text-align: center;
+  padding: 2rem;
+
+  &__rate {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name {
+
+  }
+}
