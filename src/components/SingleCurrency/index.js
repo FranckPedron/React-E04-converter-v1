@@ -1,17 +1,10 @@
 import './style.scss';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
-function SingleCurrency({ name }) {
-  const [isSelected, setSelected] = useState(false);
-
-  const toggleSelected = () => {
-    setSelected(!isSelected);
-  };
-
+function SingleCurrency({ name, setCurrency }) {
   const handleClick = (e) => {
     e.preventDefault();
-    toggleSelected();
+    setCurrency(name);
   };
 
   return (
@@ -23,6 +16,7 @@ function SingleCurrency({ name }) {
 
 SingleCurrency.propTypes = {
   name: PropTypes.string.isRequired,
+  setCurrency: PropTypes.func.isRequired,
 };
 
 export default SingleCurrency;
